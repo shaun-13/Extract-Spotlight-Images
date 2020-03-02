@@ -34,13 +34,14 @@ This repository contains instructions and program for extracting Windows Spotlig
 1. Check the box '**Run task as soon as possible after a scheduled start is missed**'
 1. Press '**Ok**'
 1. In the middle panel, locate the newly created task '**Extract Spotlight Images**', right-click and press '**Run**'
+1. If a Windows Security Prompt appears, click on the prompt and allow Python.exe the necessary file permissions.
 1. Close the Task Scheduler Window
 
 ### Change your Desktop Background settings
 1. Press '**WIN**' + '**R**'
-1. Enter '**control /name Microsoft.Personalization /page pageWallpaper**'
+1. Enter '**control /name Microsoft.Personalization /page pageWallpaper**' and press '**Enter**'
 1. In the background settings windows, make sure the '**Background**' field is set to '**Slideshow**'
-1. Under the '**Choose albums for your slideshow**', click '**Browse**', paste this file path into the explorer window **%userprofile%/Pictures/Spotlight Images**
+1. Under the '**Choose albums for your slideshow**', click '**Browse**', paste this file path into the explorer window '**%userprofile%/Pictures/Spotlight Images**'
 1. You can choose to keep the rest of the default settings or edit to your preference 
 
 ## Troubleshooting
