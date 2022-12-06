@@ -12,10 +12,10 @@ dst = os.path.join(os.environ['USERPROFILE'], 'Pictures/Spotlight Images/')
 
 def copy_spotlight(src, dst):
     """
-    This function copies the Windows Spotlight Images into a user specified folder to be used as Windows Desktop Background.
-    This function takes in 2 arguments:
-        src (str): the file path containing the Windows Spotlight Images
-        dst (str): the file path of the folder that the copied Windows Spotlight Images will be stored in. 
+    Copies the Windows Spotlight Images into a user specified folder to be used as Windows Desktop Background
+        Parameters:
+            src (str): the file path containing the Windows Spotlight Images
+            dst (str): the file path of the folder that the copied Windows Spotlight Images will be stored in. 
     """
     # Checks if destination folder exists and creates one (including all parent and subfolders) if the dst file path does not exist
     if not os.path.exists(dst):

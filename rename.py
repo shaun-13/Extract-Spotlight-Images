@@ -4,6 +4,11 @@ import os
 dst = os.path.join(os.environ['USERPROFILE'], 'Pictures/Spotlight Images/')
 
 def rename(dst):
+    """
+    Checks the destination folder for any filenames with duplicate .jpg extension
+        Parameters:
+            dst (str): the file path of the folder that the copied Windows Spotlight Images will be stored in. 
+    """
     print("Checking for files with duplicate .jpg extensions...")
     for filename in os.listdir(dst):
         if ".jpg" not in filename:

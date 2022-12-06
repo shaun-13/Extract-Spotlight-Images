@@ -5,6 +5,11 @@ import cv2
 dst = os.path.join(os.environ['USERPROFILE'], 'Pictures/Spotlight Images/')
 
 def portrait_cleanup(dst):
+    """
+    Checks the destination folder for any images in portrait orientation and deletes them
+        Parameters:
+            dst (str): the file path of the folder that the copied Windows Spotlight Images will be stored in. 
+    """
     print("Portrait Spotlight Images Cleanup is running...\n")
     for filename in os.listdir(dst):
         if ".jpg" not in filename:
