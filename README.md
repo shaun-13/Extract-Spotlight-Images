@@ -1,17 +1,26 @@
 # Extract-Spotlight-Images
-This repository contains instructions and program for extracting Windows Spotlight Images (the photos on the lock-screen) and setting it as your Desktop Wallpaper
+This repository contains instructions and program for extracting Windows Spotlight Images (the photos on the lock-screen) and setting it as your Desktop Wallpaper.
 
-## How to run this program
+# Table of contents
+1. [How to run this program](#how_to)
+    1. [Prerequisites](#prerequisites) 
+    1. [Create an automated scheduled task](#scheduled_task)
+    1. [Change your Desktop Background settings](#change_desktop_bg)
+2. [Troubleshooting](#troubleshooting)
+    1. [Finding your Windows Spotlight folder](#find_spotlight_folder)
+    1. [Change destination folder](#change_destination_folder)
 
-## Prerequisites:
+## How to run this program <a name="how-to"></a>
+
+## Prerequisites: <a name="prerequisites"></a>
 1. [Python 3](https://www.python.org/downloads/) must be installed
 1. The following set of instructions assumes you are running Windows 10
 
-### Download or clone this repository
+### Download or clone this repository 
 1. Download this repository as .zip or clone this repository
 1. Extract the files into your preferred location
 
-### Create an automated scheduled task
+### Create an automated scheduled task <a name="scheduled_task"></a>
 1. Press <kbd>⊞ Win</kbd> + <kbd>R</kbd>
 1. Open Task Scheduler by entering <kbd>taskschd.msc</kbd> and press <kbd>Enter</kbd>
 1. In the left panel, under '**Task Scheduler (Local)**' , click on '**Task Scheduler Library**'
@@ -36,16 +45,16 @@ This repository contains instructions and program for extracting Windows Spotlig
 1. In the Task Scheduler Library, locate the newly created task '**Extract Spotlight Images**', right-click and press '**Run**'
 1. If a Windows Security Prompt appears, click on the prompt and allow Python.exe to have the necessary file permissions
 1. **END**
-### Change your Desktop Background settings
+### Change your Desktop Background settings <a name="change_desktop_bg"></a>
 1. Press <kbd>⊞ Win</kbd> + <kbd>R</kbd>
 1. Open the Windows Background Settings by entering <kbd>control /name Microsoft.Personalization /page pageWallpaper</kbd> and press <kbd>Enter</kbd>
 1. Make sure the '**Background**' option is set to '**Slideshow**'
 1. Under the '**Choose albums for your slideshow**', click '**Browse**', paste this file path into the explorer window <kbd>%userprofile%/Pictures/Spotlight Images</kbd>, press <kbd>Enter</kbd> and select the **Spotlight Images** folder
 1. You can choose to keep the rest of the default settings or edit to your preference (e.g. shuffle on/off and duration before the next image) 
 
-## Troubleshooting
+## Troubleshooting <a name="troubleshooting"></a>
 - Feel free to open an [**Issue**](https://github.com/shaun-13/Extract-Spotlight-Images/issues/new) if there are any problems!
-### If program is unable to find the Windows Spotlight Images, your Windows Spotlight Images folder may be located on a different filepath. 
+### If program is unable to find the Windows Spotlight Images, your Windows Spotlight Images folder may be located on a different filepath. <a name="find_spotlight_folder"></a>
 **Follow these steps to troubleshoot:** 
 1. Locate your Windows Spotlight Images folder. To do so, open Windows Explorer, copy and path this file path in the address bar and hit <kbd>Enter</kbd>: %userprofile%/AppData/Local/Packages/Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy/LocalState/Assets/
 1. If this file path is correct, you should see a folder containing many files with filename like 'df3313abf4e5440a273f95f869689b87fbe878e63355c7f1f02412116bb46cd1' and with the .FILE extension
@@ -79,7 +88,7 @@ src = 'PASTE COPIED FILE PATH HERE'
 
 ```
 
-### To change the default folder where the Windows Spotlight Images are downloaded to (default: 'C:/Users/\<YOUR_COMPUTER_NAME\>/Pictures/Spotlight Images/')
+### To change the default folder where the Windows Spotlight Images are downloaded to (default: 'C:/Users/\<YOUR_COMPUTER_NAME\>/Pictures/Spotlight Images/')<a name="change_destination_folder"></a>
 1. Edit ``spotlight.py`` in the following way:
 
 ``` python
